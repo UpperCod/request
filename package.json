@@ -1,7 +1,7 @@
 {
     "name": "@uppercod/request",
     "version": "1.0.0",
-    "description": "Capture text fragments based on regular expressions that are executed for each line of the text",
+    "description": "Generate a GET request to the given url, the request function is able to consume the url, returning the url response url and its body.",
     "type": "module",
     "main": "cjs.js",
     "module": "esm.js",
