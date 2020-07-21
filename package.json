@@ -1,6 +1,6 @@
 {
     "name": "@uppercod/request",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Capture text fragments based on regular expressions that are executed for each line of the text",
     "type": "module",
     "main": "cjs.js",
