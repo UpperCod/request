@@ -2,13 +2,6 @@ import url from "url";
 import http from "http";
 import https from "https";
 import descompress from "decompress-response";
-
-/**
- * Determines if the file content can be considered json
- * @param {string} content
- */
-let isJsonContent = (content) => /^\s*[\{[]/.test(content);
-
 /**
  * Genera un request que a su vez retorna la ultima url respuesta
  * @param {string} uri - url to generate the request
@@ -37,11 +30,7 @@ export let request = (uri, limitRedirect = 5) =>
                         limitRedirect
                     ).then(resolve, reject);
                 } else {
-                    resolve([
-                        uri,
-                        isJsonContent(data) ? JSON.parse(data) : data,
-                        res,
-                    ]);
+                    resolve([uri, data, res]);
                 }
             });
         }).on("error", reject);

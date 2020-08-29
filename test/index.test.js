@@ -1,7 +1,7 @@
 import test from "ava";
 import http from "http";
 
-import { request } from "../esm.js";
+import { request } from "../src";
 
 const port = 8080;
 const url = `http://localhost:` + port;
