@@ -6,7 +6,7 @@ import descompress from "decompress-response";
  * Genera un request que a su vez retorna la ultima url respuesta
  * @param {string} uri - url to generate the request
  * @param {number} [limitRedirect] - limits of redirects in the recursive process
- * @returns {Promise<[string,string,object]>}
+ * @returns {Promise<[string,string,import("http").IncomingMessage]>}
  */
 export let request = (uri, limitRedirect = 5) =>
     new Promise((resolve, reject) => {
