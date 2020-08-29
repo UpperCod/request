@@ -1,6 +1,8 @@
+import { IncomingMessage } from "http";
 declare module "@uppercod/request" {
-    export function request<T extends string>(
-        url: T,
-        limitRequest: number = 5
-    ): Promise<[T, string]>;
+    export type Return = [string, string, IncomingMessage];
+    export function request(
+        url: string,
+        limitRequest?: number = 5
+    ): Promise<Return>;
 }
